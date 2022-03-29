@@ -35,8 +35,8 @@ class _button:
         return [self.x, self.y, self.text, self.loc]
     def press(self):
         global turn, turns, titletext
-        if turns == 9:
-            pass
+        if turns == 9 or squares[self.x][self.y] != '--':
+            return None
         if turn == 'x':
             self.update_text('x')
             turn = 'o'
